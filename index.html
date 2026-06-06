@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Razita</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+min-height:100vh;
+background:linear-gradient(135deg,#ffb6c1,#ffd1dc,#fff0f5);
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
+overflow:hidden;
+position:relative;
+}
+
+/* Glow Background */
+
+.glow{
+position:absolute;
+width:700px;
+height:700px;
+background:rgba(255,255,255,.25);
+border-radius:50%;
+filter:blur(120px);
+animation:pulse 6s infinite;
+}
+
+@keyframes pulse{
+50%{
+transform:scale(1.2);
+}
+}
+
+/* Card */
+
+.card{
+width:100%;
+max-width:950px;
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(20px);
+border:1px solid rgba(255,255,255,.3);
+border-radius:35px;
+padding:40px;
+text-align:center;
+box-shadow:0 20px 60px rgba(0,0,0,.15);
+position:relative;
+z-index:10;
+animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+50%{
+transform:translateY(-10px);
+}
+}
+
+.subtitle{
+font-size:14px;
+letter-spacing:4px;
+font-weight:600;
+color:#b84c74;
+}
+
+h1{
+font-size:4rem;
+margin:10px 0;
+background:linear-gradient(45deg,#ff4f81,#ff8db1);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.name{
+font-size:2rem;
+font-weight:700;
+color:#7a3350;
+margin-bottom:10px;
+}
+
+.age{
+font-size:1.2rem;
+color:#555;
+margin-bottom:25px;
+}
+
+/* Gallery */
+
+.gallery{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-bottom:25px;
+}
+
+.photo{
+width:180px;
+height:230px;
+padding:5px;
+border-radius:25px;
+background:linear-gradient(45deg,#ff4f81,#ffd700,#ff85a2);
+box-shadow:0 0 25px rgba(255,105,180,.4);
+overflow:hidden;
+transition:.4s;
+}
+
+.photo img{
+width:100%;
+height:100%;
+object-fit:cover;
+border-radius:20px;
+}
+
+.photo:hover{
+transform:translateY(-10px) scale(1.05);
+}
+
+.center{
+transform:scale(1.08);
+}
+
+/* Message */
+
+.message{
+max-width:700px;
+margin:auto;
+line-height:1.8;
+color:#444;
+}
+
+/* Button */
+
+button{
+margin-top:25px;
+padding:15px 35px;
+border:none;
+border-radius:50px;
+background:linear-gradient(45deg,#ff4f81,#ff7ea8);
+color:white;
+font-size:1rem;
+font-weight:600;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.08);
+}
+
+/* Letter */
+
+#letter{
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.65);
+display:flex;
+justify-content:center;
+align-items:center;
+opacity:0;
+pointer-events:none;
+transition:.5s;
+z-index:999;
+}
+
+#letter.show{
+opacity:1;
+pointer-events:auto;
+}
+
+.paper{
+width:90%;
+max-width:650px;
+background:white;
+padding:40px;
+border-radius:25px;
+box-shadow:0 20px 60px rgba(0,0,0,.3);
+animation:pop .5s ease;
+}
+
+@keyframes pop{
+from{
+transform:scale(.8);
+opacity:0;
+}
+to{
+transform:scale(1);
+opacity:1;
+}
+}
+
+.paper h2{
+text-align:center;
+color:#ff4f81;
+margin-bottom:20px;
+}
+
+.paper p{
+line-height:1.8;
+color:#444;
+}
+
+.signature{
+text-align:right;
+margin-top:20px;
+font-weight:700;
+color:#ff4f81;
+}
+
+.close{
+width:100%;
+margin-top:20px;
+}
+
+/* Balloons */
+
+.balloon{
+position:absolute;
+bottom:-100px;
+font-size:45px;
+animation:fly linear infinite;
+pointer-events:none;
+}
+
+@keyframes fly{
+to{
+transform:translateY(-120vh);
+}
+}
+
+/* Confetti */
+
+.confetti{
+position:absolute;
+width:12px;
+height:12px;
+top:-20px;
+animation:fall linear forwards;
+}
+
+@keyframes fall{
+to{
+transform:translateY(110vh) rotate(720deg);
+}
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+h1{
+font-size:2.5rem;
+}
+
+.name{
+font-size:1.5rem;
+}
+
+.photo{
+width:110px;
+height:140px;
+}
+
+.card{
+padding:25px;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<div class="glow"></div>
+
+<div class="card">
+
+<div class="subtitle">
+✨ SWEET SEVENTEEN ✨
+</div>
+
+<h1>Happy Birthday</h1>
+
+<div class="name">
+Razita Fatin Nur Amalina
+</div>
+
+<div class="age">
+🎂 17 Years Old 🎂
+</div>
+
+<div class="gallery">
+
+<div class="photo">
+<img src="foto1.jpg" alt="">
+</div>
+
+<div class="photo center">
+<img src="foto2.jpg" alt="">
+</div>
+
+<div class="photo">
+<img src="foto3.jpg" alt="">
+</div>
+
+</div>
+
+<div class="message">
+Selamat ulang tahun yang ke-17. Semoga selalu diberikan kesehatan,
+kebahagiaan, keberkahan, kesuksesan, dan dipermudah dalam meraih
+setiap impian yang sedang diperjuangkan. ✨💖
+</div>
+
+<button onclick="openLetter()">
+💌 Buka Kejutan
+</button>
+
+</div>
+
+<!-- SURAT -->
+
+<div id="letter">
+
+<div class="paper">
+
+<h2>🎉 Happy Birthday 🎉</h2>
+
+<p>
+Hai Razita Fatin Nur Amalina,
+</p>
+
+<br>
+
+<p>
+Selamat ulang tahun yang ke-17. 🎂✨
+</p>
+
+<p>
+Semoga di usia yang baru ini kamu selalu diberikan kesehatan,
+kebahagiaan, keberkahan, dan kekuatan untuk meraih semua cita-cita
+yang sedang kamu perjuangkan.
+</p>
+
+<p>
+Semoga setiap langkahmu dipenuhi hal-hal baik,
+setiap harimu dipenuhi senyuman,
+dan setiap doa yang kamu panjatkan dapat terkabul pada waktu terbaik.
+</p>
+
+<p>
+Terima kasih sudah bertahan dan berkembang sejauh ini.
+Jangan pernah berhenti menjadi pribadi yang hebat dan terus bersinar.
+✨💖
+</p>
+
+<p>
+Happy Sweet Seventeen 🎉
+</p>
+
+<div class="signature">
+Dari,<br>
+Bahy Afgan 💌
+</div>
+
+<button class="close" onclick="closeLetter()">
+Tutup Surat
+</button>
+
+</div>
+
+</div>
+
+<script>
+
+/* BALON */
+
+for(let i=0;i<30;i++){
+
+let balloon=document.createElement("div");
+
+balloon.className="balloon";
+
+balloon.innerHTML=
+["🎈","🎉","💖","✨","🎂"][Math.floor(Math.random()*5)];
+
+balloon.style.left=Math.random()*100+"vw";
+
+balloon.style.animationDuration=
+(Math.random()*8+8)+"s";
+
+document.body.appendChild(balloon);
+
+}
+
+/* BUKA SURAT */
+
+function openLetter(){
+
+document.getElementById("letter").classList.add("show");
+
+for(let i=0;i<300;i++){
+
+let c=document.createElement("div");
+
+c.className="confetti";
+
+c.style.left=Math.random()*100+"vw";
+
+c.style.background=
+`hsl(${Math.random()*360},100%,60%)`;
+
+c.style.animationDuration=
+(Math.random()*3+2)+"s";
+
+document.body.appendChild(c);
+
+setTimeout(()=>{
+c.remove();
+},5000);
+
+}
+
+}
+
+function closeLetter(){
+document.getElementById("letter").classList.remove("show");
+}
+
+</script>
+
+</body>
+</html>
